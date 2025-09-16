@@ -24,6 +24,7 @@ public class SpikeAction : MonoBehaviour
         {
             Destroy(gameObject);
             SpikeSpawner.destroy_a = true;
+            Debug.Log(SpikeSpawner.destroy_a);
         }
     }
 }
