@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5555140837174997245}
   m_Layer: 0
   m_Name: Spike
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b810422e1f9084ea96aebdec779b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpakeMove
+  SpikeSpawner: {fileID: 0}
 --- !u!50 &27309086396348083
 Rigidbody2D:
   serializedVersion: 5
@@ -117,7 +118,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1

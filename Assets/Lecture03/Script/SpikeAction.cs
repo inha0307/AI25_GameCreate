@@ -1,21 +1,21 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class SpikeAction : MonoBehaviour
 {
     float Start_XPoint;
-    float Start_YPoint;
+    public SpikeSpawner SpikeSpawner;
 
     void Start()
     {
         // 초기 위치 저장
         Start_XPoint = transform.position.x;
-        Start_YPoint = transform.position.y;
     }
 
     void Update()
     {
         Start_XPoint -= 0.025f;
-        transform.position = new Vector3(Start_XPoint, Start_YPoint, transform.position.z);
+        transform.position = new Vector3(Start_XPoint, transform.position.y, transform.position.z);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -23,6 +23,7 @@ public class SpikeAction : MonoBehaviour
         if (collision.gameObject.CompareTag("Destroyer"))
         {
             Destroy(gameObject);
+            SpikeSpawner.destroy_a = true;
         }
     }
 }

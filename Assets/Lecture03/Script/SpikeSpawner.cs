@@ -3,8 +3,7 @@ using UnityEngine;
 public class SpikeSpawner : MonoBehaviour
 {
     public GameObject SpikePrefab;
-
-    bool a = true;
+    public bool destroy_a = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,11 +14,11 @@ public class SpikeSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(a)
+        if(destroy_a)
         {
             GameObject spike = Instantiate(SpikePrefab);
             spike.transform.position = transform.position;
-            a = false;
+            destroy_a = false;
         }
     }
 }
