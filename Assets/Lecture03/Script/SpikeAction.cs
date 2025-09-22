@@ -1,29 +1,28 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class SpikeAction : MonoBehaviour
 {
-    float Start_XPoint;
-    public SpikeSpawner SpikeSpawner;
+    float speed = 5;
 
     void Start()
     {
-        // 초기 위치 저장
-        Start_XPoint = transform.position.x;
+        Application.targetFrameRate = 60;
     }
 
     void Update()
     {
-        Start_XPoint -= 0.025f;
-        transform.position = new Vector3(Start_XPoint, transform.position.y, transform.position.z);
+        float moveVectoX = Time.deltaTime * speed;
+        transform.position = new Vector3(transform.position.x - 0.05f, transform.position.y, transform.position.z);
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Destroyer"))
+
+        if (collision.gameObject.CompareTag("tkrwprl"))
         {
             Destroy(gameObject);
-            SpikeSpawner.destroy_a = true;
+            Debug.Log("Spike : 소멸");
         }
     }
 }
