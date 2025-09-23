@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class L4_PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     bool isJumping = false;

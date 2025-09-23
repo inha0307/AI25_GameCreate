@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2181266057329335861}
   - component: {fileID: 7354727447965096103}
-  - component: {fileID: 3348787215897653558}
   - component: {fileID: 27309086396348083}
   - component: {fileID: 5555140837174997245}
+  - component: {fileID: 4972271757996589782}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Enemy
@@ -93,20 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3348787215897653558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3524550291400837907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1b810422e1f9084ea96aebdec779b47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpakeMove
-  speed: 5
-  acceleration: 2
 --- !u!50 &27309086396348083
 Rigidbody2D:
   serializedVersion: 5
@@ -184,3 +170,15 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &4972271757996589782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524550291400837907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b30d8b333a84474c8e34a6bfa174637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::L4_SpikeAction

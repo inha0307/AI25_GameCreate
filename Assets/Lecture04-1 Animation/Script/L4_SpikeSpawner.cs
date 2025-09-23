@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 
-public class SpikeSpawner : MonoBehaviour
+public class L4_SpikeSpawner : MonoBehaviour
 {
     public GameObject spikePrefab;           // 가시 프리팹
     float spawnInterval = 4.0f;              // 스폰 간격 (초)

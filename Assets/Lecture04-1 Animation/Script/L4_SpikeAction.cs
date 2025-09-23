@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpikeAction : MonoBehaviour
+public class L4_SpikeAction : MonoBehaviour
 {
     public static float speed = 5f;          // 모든 Spike가 공유하는 속도
     public static float acceleration = 0.5f; // 초당 속도 증가량
