@@ -7,6 +7,7 @@ public class L4_PlayerController : MonoBehaviour
     Rigidbody2D rb;
     bool isJumping = false;
     public float JumpPower = 10.0f;
+    Animator animator;
 
     public GameObject text;
 
@@ -14,16 +15,7 @@ public class L4_PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         text.gameObject.SetActive(false);
-    }
-
-    void Update()
-    {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && !isJumping)
-        {
-            Debug.Log("Space Action");
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpPower);
-            isJumping = true;
-        }
+        animator = GetComponent<Animator>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -35,8 +27,19 @@ public class L4_PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            text.gameObject.SetActive(true);
+            text.SetActive(true);
             Time.timeScale = 0f;
+        }
+    }
+
+    void Update()
+    {
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && !isJumping)
+        {
+            Debug.Log("Space Action");
+            animator.Play("Playerani", -1, 0f);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpPower);
+            isJumping = true;
         }
     }
 }
